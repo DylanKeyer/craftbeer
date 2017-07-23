@@ -1,1 +1,1 @@
-worker: scrapy crawl beer-styles
+web: scrapy crawl beer-styles

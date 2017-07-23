@@ -6,7 +6,6 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 import pymongo
-
 from scrapy.conf import settings
 from scrapy.exceptions import DropItem
 import logging
@@ -34,11 +33,4 @@ class MongoPipeline(object):
             self.collection.update_one({'style': item['style']}, {'$set': dict(item)}, upsert=True)
             #logging.INFO("Beer added to MongoDB database!")
         return item
-
-class MySqlPipeline(object):
-    def __init__(self):
-        connection = pymongo.MongoClient(settings['MONGODB_URI'])
-        
-        self.db = connection[settings['MONGODB_DB']]
-
         

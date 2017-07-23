@@ -1,0 +1,13 @@
+setup.py
+beer/__init__.py
+beer/items.py
+beer/middlewares.py
+beer/pipelines.py
+beer/settings.py
+beer.egg-info/PKG-INFO
+beer.egg-info/SOURCES.txt
+beer.egg-info/dependency_links.txt
+beer.egg-info/entry_points.txt
+beer.egg-info/top_level.txt
+beer/spiders/__init__.py
+beer/spiders/beer_styles.py

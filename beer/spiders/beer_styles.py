@@ -18,11 +18,9 @@ class BeerStylesSpider(Spider):
 
     def parse(self, response):
 #        styles = Selector(response).xpath('//*[@id="styles"]/li')
-#        for style in styles:
-#            
-##            item['style'] = style.xpath(
+#        for style in styles: 
+#            item['style'] = style.xpath(
 #                    'h2/a/text()').extract()[0]
-
         urls = Selector(response).xpath('//*[@id="styles"]/li/h2/a/@href').extract()
         for url in urls:
             yield Request(url=url, callback=self.parse_more)

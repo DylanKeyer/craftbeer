@@ -58,7 +58,7 @@ DOWNLOAD_DELAY = 10
 #}
 
 DOWNLOADER_MIDDLEWARES = {
-    'beer.middlewares.ProxyMiddleware': 1,
+#    'beer.middlewares.ProxyMiddleware': 1,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': 400
 
 }
